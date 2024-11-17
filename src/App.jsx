@@ -9,13 +9,18 @@ import styled from 'styled-components'
 import Classcomponent from './Classcomponent'
 import Lifecycle from './Lifecycle'
 import JsonserverExample from './JsonserverExample'
+import Menu from '../Menu'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
 // import Login from './Login'
 function App() {
-  const H4 = styled.h4 `
+  const H4 = styled.h4`
           color : blue
   `
-  
-  const Button = styled.button `
+
+  const Button = styled.button`
     background-color : brown;
     color : yellow;
   `
@@ -26,11 +31,19 @@ function App() {
       <H4>React Styled Component Applied</H4>
       <Button>save</Button> */}
       {/* <Formcomponent /> */}
-      <Usercomponent />
+      {/* <Usercomponent /> */}
       {/* <Login /> */}
       {/* <Classcomponent name="jeck"/> */}
       {/* <Lifecycle /> */}
       {/* <JsonserverExample /> */}
+      <Menu />
+      
+      <Routes>
+        <Route path='/home' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+      
     </>
   )
 }
