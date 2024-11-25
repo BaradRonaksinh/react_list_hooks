@@ -74,7 +74,7 @@ const Formcomponent = () => {
                                     <td>
                                         <button onClick={() => editData(index)}>Edit</button>
                                         <button onClick={() => delData(index)}>Delete</button>
-                                        </td>
+                                    </td>
                                 </tr>
                             )
                         })
